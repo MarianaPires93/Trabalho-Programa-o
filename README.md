@@ -3,6 +3,16 @@ Trabalho de programação. Tema escolhido: KNN (K Nearest Neighbors). Mariana Pi
 
 
 #Welcome to KNN code. In here you'll find a simplified code that will calculate the KNN distance with the users input of the number of neighbours and with or without normalized data. 
+Small breakdown of the code: 
+- We created a class called KNN (K-Nearest Neighbours) that implements the KNN algorithm for class classification.
+- Inside the class we have several definitions:
+    - __init__ Initializes the KNN classifier with parameters 'K' (number of neighbours) and 'normalize' (a boolean indication, where in this instance, the user will define if the data will be normalized or not)
+    - fit: Trains the model by storing the provided training data and labels. IF normalize is set to true, then it normalizes the data
+    - predict: Makes predictions on the test data by finding the nearest K neighbour for each test sample. It also normalizes the data if set to true.
+    - normalize: A method that normalizes the input data. 
+
+
+
 
 #Example of usage of the code: 
 # Create synthetic data
