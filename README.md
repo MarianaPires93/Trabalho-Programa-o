@@ -16,26 +16,32 @@ Small breakdown of the code:
 
 # Example of usage of the code: 
 #Create synthetic data
+
 np.random.seed(42)
 X_train = np.random.rand(100, 2) * 10
 y_train = np.random.randint(0, 2, size=100)
 
 #User inputs
+
 Ks = int(input("Enter the number of neighbors (K): "))
 normalize_option = input("Normalize data? (yes/no): ").lower() == 'yes'
 
 #Create and fit KNN model based on user inputs
+
 knn = KNN(K=Ks, normalize=normalize_option)
 knn.fit(X_train, y_train)
 
 #Generate test data (random points for prediction)
+
 X_test = np.random.rand(10, 2) * 10
 
 #Predict using the fitted model
+
 predicted_labels = knn.predict(X_test)
 print("Predicted labels:", predicted_labels)
 
 #Plotting the training data
+
 plt.figure(figsize=(8, 6))
 plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap='viridis', label='Training Data')
 plt.title('Training Data')
@@ -47,6 +53,7 @@ plt.grid(True)
 plt.show()
 
 #Plotting the test data and predicted labels
+
 plt.figure(figsize=(8, 6))
 plt.scatter(X_test[:, 0], X_test[:, 1], c=predicted_labels, cmap='viridis', label='Predicted Labels')
 plt.title('Predicted Labels for Test Data')
