@@ -7,9 +7,9 @@ Small breakdown of the code:
 - We created a class called KNN (K-Nearest Neighbours) that implements the KNN algorithm for class classification.
 - Inside the class we have several definitions:
     - __init__ Initializes the KNN classifier with parameters 'K' (number of neighbours) and 'normalize' (a boolean indication, where in this instance, the user will define if the data will be normalized or not)
-    - fit: Trains the model by storing the provided training data and labels. IF normalize is set to true, then it normalizes the data
-    - predict: Makes predictions on the test data by finding the nearest K neighbour for each test sample. It also normalizes the data if set to true.
-    - normalize: A method that normalizes the input data. 
+    - __fit__ Trains the model by storing the provided training data and labels. IF normalize is set to true, then it normalizes the data
+    - __predict__ Makes predictions on the test data by finding the nearest K neighbour for each test sample. It also normalizes the data if set to true.
+    - __normalize__ A method that normalizes the input data. 
 
 
 
